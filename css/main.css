@@ -1,0 +1,118 @@
+body {
+  font-family: 'Merriweather', serif;
+  color: #6D390C;
+  font-size: 18px;
+  line-height: 28px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  display: block;
+  color: #6D390C;
+  text-decoration: none;
+}
+
+.first-section {
+  position: fixed;
+  top: 0;
+  right: 50%;
+  bottom: 0;
+  left: 0;
+  background-color: #6D390C;
+}
+
+.cover-image {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('../images/cover.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.cover-image:before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  background: transparent;
+  background: -moz-linear-gradient(top, transparent 50%, rgba(0,0,0,1) 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(50%, transparent), color-stop(100%, rgba(0,0,0,1)));
+  background: -webkit-linear-gradient(top, transparent 50%, rgba(0,0,0,1) 100%);
+  background: -o-linear-gradient(top, transparent 50%, rgba(0,0,0,1) 100%);
+  background: -ms-linear-gradient(top, transparent 50%, rgba(0,0,0,1) 100%);
+  background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,1) 100%);
+}
+
+.second-section {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 50%;
+  padding: 30px;
+  background-color: white;
+}
+
+.title {
+  font-size: 42px;
+  line-height: 50px;
+  margin: -4px 0;
+}
+
+.description {
+  margin: 30px 0;
+}
+
+.menu {
+  position: absolute;
+  bottom: 0;
+  right: 30px;
+  left: 30px;
+  list-style: none;
+}
+
+.menu-option {
+  text-align: right;
+}
+
+.menu-link {
+  display: inline-block;
+}
+
+.menu-link-title {
+  position: relative;
+  padding: 8px 2px;
+  box-sizing: border-box;
+  z-index: 1;
+  transition: color 200ms;
+}
+
+.menu-link-title:before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background-color: #6D390C;
+  z-index: -1;
+  transition: height 200ms;
+}
+
+.menu-link-title:hover {
+  color: white;
+}
+
+.menu-link-title:hover:before {
+  height: 45px;
+}
