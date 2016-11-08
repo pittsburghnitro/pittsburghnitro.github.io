@@ -18,8 +18,13 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
         <![endif]-->
 
-        <section class="first-section">
-          <div class="cover-image"></div>
+        <section id="CoverImageViewport" class="first-section">
+            <div class="cover-image"></div>
+            <span class="overlay">
+                <svg version="1.1" id="circle" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 500 250" enable-background="new 0 0 500 250" xml:space="preserve" PreserveAspectRatio="none">
+                  <path fill="#FFFFFF" d="M250,246.5c-97.85,0-186.344-40.044-250-104.633V250h500V141.867C436.344,206.456,347.85,246.5,250,246.5z" />
+                </svg>
+            </span>
         </section>
 
         <section class="second-section">
@@ -47,8 +52,7 @@
 
         <script src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.1.0.min.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
-        <script src="js/main.js"></script>
+        <script src="js/svgScrollAnimation.js"></script>
 
         <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
         <script>
