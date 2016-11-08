@@ -1,3 +1,8 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
 body {
   font-family: 'Merriweather', serif;
   color: #6D390C;
@@ -17,13 +22,22 @@ a {
 }
 
 .first-section {
-  position: fixed;
-  top: 0;
-  right: 50%;
-  bottom: 0;
-  left: 0;
+  position: relative;
+  height: 40%;
   background-color: #6D390C;
-  box-shadow: 0 0 10px #000;
+  z-index: 1;
+}
+
+@media(min-width: 800px) {
+  .first-section {
+    position: fixed;
+    top: 0;
+    right: 50%;
+    bottom: 0;
+    left: 0;
+    height: auto;
+    box-shadow: 0 0 10px #000;
+  }
 }
 
 .cover-image {
@@ -33,9 +47,9 @@ a {
   bottom: 0;
   left: 0;
   background-image: url('../images/cover.jpg');
-  background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: 50% 30%;
 }
 
 .cover-image:before {
@@ -55,13 +69,19 @@ a {
 }
 
 .second-section {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 50%;
+  position: relative;
   padding: 30px;
   background-color: white;
+}
+
+@media(min-width: 800px) {
+  .second-section {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+  }
 }
 
 .title {
@@ -75,11 +95,16 @@ a {
 }
 
 .menu {
-  position: absolute;
-  bottom: 0;
-  right: 30px;
-  left: 30px;
   list-style: none;
+}
+
+@media(min-width: 800px) {
+  .menu {
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    left: 30px;
+  }
 }
 
 .menu-option {
