@@ -1,21 +1,19 @@
-/*
-found this function here
-http://stackoverflow.com/a/26831113
-*/
-
 function inViewport($el) {
-    var H = $(window).height(),
-        r = $el[0].getBoundingClientRect(), t=r.top, b=r.bottom;
-    return Math.max(0, t>0? H-t : (b<H?b:H));
+    var height = document.body.offsetHeight,
+        rect = $el[0].getBoundingClientRect(),
+        top = rect.top,
+        bottom = rect.bottom;
+
+    return bottom < height ? bottom : height;
 }
 
 var viewPort = $('#CoverImageViewport');
-var overlay = $('.overlay');
+var overlay = $('#Overlay');
 
 function styleSvg() {
-  var window_offset = inViewport(viewPort);
-  overlay.height(window_offset);
+  var offset = inViewport(viewPort);
+  overlay.height(offset);
   requestAnimationFrame(styleSvg);
 }
 
-$(window).on("scroll resize", styleSvg());
+styleSvg();
